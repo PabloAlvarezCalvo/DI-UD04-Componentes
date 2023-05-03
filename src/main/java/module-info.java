@@ -3,6 +3,6 @@ module com.example.diud04componentes {
     requires javafx.fxml;
 
 
-    opens com.example.diud04componentes to javafx.fxml;
-    exports com.example.diud04componentes;
+    opens com.di.componentes to javafx.fxml;
+    exports com.di.componentes;
 }

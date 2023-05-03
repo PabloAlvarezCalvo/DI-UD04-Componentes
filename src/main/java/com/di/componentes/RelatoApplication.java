@@ -1,4 +1,4 @@
-package com.example.diud04componentes;
+package com.di.componentes;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
