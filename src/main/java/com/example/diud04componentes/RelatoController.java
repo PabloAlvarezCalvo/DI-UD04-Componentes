@@ -3,7 +3,7 @@ package com.example.diud04componentes;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class RelatoController {
     @FXML
     private Label welcomeText;
 
