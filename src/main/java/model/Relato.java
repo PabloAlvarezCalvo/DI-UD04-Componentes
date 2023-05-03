@@ -3,6 +3,7 @@ package model;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.net.URL;
 import java.util.HashMap;
 
 public class Relato extends ImageView {
@@ -20,7 +21,7 @@ public class Relato extends ImageView {
     public void nextImage(){
         if (!finished) {
             String url = images.get(++index);
-            this.setImage(new Image(getClass().getResource(url).toExternalForm()));
+            this.setImage(new Image(url));
 
             if (index == images.size() - 1) {
                 finished = true;
@@ -31,7 +32,7 @@ public class Relato extends ImageView {
 
     public void start(){
         index = 0;
-        this.setImage(new Image(getClass().getResource(images.get(index)).toExternalForm()));
+        this.setImage(new Image(images.get(index)));
         this.setVisible(true);
         finished = false;
     }

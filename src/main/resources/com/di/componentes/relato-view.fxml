@@ -18,9 +18,9 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnInfantil" mnemonicParsing="false" text="Infantil" />
-            <Button fx:id="btnRomantico" mnemonicParsing="false" text="Romántico" GridPane.columnIndex="1" />
-            <Button fx:id="btnTerror" mnemonicParsing="false" text="Terror" GridPane.columnIndex="2" />
+            <Button fx:id="btnInfantil" mnemonicParsing="false" onAction="#btnInfantilClick" text="Infantil" />
+            <Button fx:id="btnRomantico" mnemonicParsing="false" onAction="#btnRomanticoClick" text="Romántico" GridPane.columnIndex="1" />
+            <Button fx:id="btnTerror" mnemonicParsing="false" onAction="#btnTerrorClick" text="Terror" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </top>
