@@ -40,22 +40,22 @@ public class RelatoController {
 
     @FXML
     public void btnInfantilClick(){
-        relatoRomantico.restart();
-        relatoTerror.restart();
+        //relatoRomantico.restart();
+        //relatoTerror.restart();
         relatoInfantil.start();
     }
 
     @FXML
     public void btnRomanticoClick(){
-        relatoInfantil.restart();
-        relatoTerror.restart();
+        //relatoInfantil.restart();
+        //relatoTerror.restart();
         relatoRomantico.start();
     }
 
     @FXML
     public void btnTerrorClick(){
-        relatoInfantil.restart();
-        relatoRomantico.restart();
+        //relatoInfantil.restart();
+        //relatoRomantico.restart();
         relatoTerror.start();
     }
 
