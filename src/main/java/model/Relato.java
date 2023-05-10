@@ -4,18 +4,21 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Relato extends ImageView {
-    private final HashMap<Integer, String> images = new HashMap<>();
+    private ArrayList<String> images = new ArrayList<>();
     private int index = 0;
     private boolean finished = false;
 
     public Relato() {
+        this.setPreserveRatio(true);
+        this.setFitWidth(200d);
     }
 
     public void addImage(String url){
-        images.put(images.size(), url);
+        images.add(url);
     }
 
     public void nextImage(){
@@ -32,8 +35,10 @@ public class Relato extends ImageView {
 
     public void start(){
         index = 0;
-        this.setImage(new Image(images.get(index)));
-        this.setVisible(true);
+        if (images.size() >0) {
+            this.setImage(new Image(images.get(index)));
+            this.setVisible(true);
+        }
         finished = false;
     }
 

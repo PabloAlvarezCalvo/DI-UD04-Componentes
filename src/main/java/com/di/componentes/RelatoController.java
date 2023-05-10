@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import model.Relato;
 
+import java.net.URISyntaxException;
+
 public class RelatoController {
     @FXML Button btnReiniciar, btnSalir;
     @FXML Button btnInfantil, btnRomantico, btnTerror;
@@ -33,6 +35,7 @@ public class RelatoController {
         relatoTerror.addImage(getClass().getResource("images/terror/01.jpg").toExternalForm());
         relatoTerror.addImage(getClass().getResource("images/terror/02.jpg").toExternalForm());
         relatoTerror.addImage(getClass().getResource("images/terror/03.jpg").toExternalForm());
+
     }
 
     @FXML
