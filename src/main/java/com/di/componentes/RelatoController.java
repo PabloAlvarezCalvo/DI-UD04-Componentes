@@ -1,11 +1,10 @@
 package com.di.componentes;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import model.Relato;
-
-import java.net.URISyntaxException;
 
 public class RelatoController {
     @FXML Button btnReiniciar, btnSalir;
@@ -40,32 +39,35 @@ public class RelatoController {
 
     @FXML
     public void btnInfantilClick(){
-        //relatoRomantico.restart();
-        //relatoTerror.restart();
         relatoInfantil.start();
+        relatoRomantico.stop();
+        relatoTerror.stop();
     }
 
     @FXML
     public void btnRomanticoClick(){
-        //relatoInfantil.restart();
-        //relatoTerror.restart();
+        relatoInfantil.stop();
         relatoRomantico.start();
+        relatoTerror.stop();
     }
 
     @FXML
     public void btnTerrorClick(){
-        //relatoInfantil.restart();
-        //relatoRomantico.restart();
+        relatoInfantil.stop();
+        relatoRomantico.stop();
         relatoTerror.start();
     }
 
     @FXML
     public void btnReiniciarClick(){
-
+        relatoInfantil.stop();
+        relatoRomantico.stop();
+        relatoTerror.stop();
     }
 
     @FXML
     public void btnSalirClick(){
-
+        Platform.exit();
+        System.exit(0);
     }
 }

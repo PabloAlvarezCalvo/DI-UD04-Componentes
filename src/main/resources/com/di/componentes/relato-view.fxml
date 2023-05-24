@@ -5,10 +5,11 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.di.componentes.RelatoController">
    <top>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -18,14 +19,23 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnInfantil" mnemonicParsing="false" onAction="#btnInfantilClick" text="Infantil" />
-            <Button fx:id="btnRomantico" mnemonicParsing="false" onAction="#btnRomanticoClick" text="Romántico" GridPane.columnIndex="1" />
-            <Button fx:id="btnTerror" mnemonicParsing="false" onAction="#btnTerrorClick" text="Terror" GridPane.columnIndex="2" />
+            <Button fx:id="btnInfantil" mnemonicParsing="false" onAction="#btnInfantilClick" prefHeight="35.0" style="-fx-background-color: lightgreen;" text="Infantil">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnRomantico" mnemonicParsing="false" onAction="#btnRomanticoClick" prefHeight="35.0" style="-fx-background-color: pink;" text="Romántico" textFill="RED" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnTerror" mnemonicParsing="false" onAction="#btnTerrorClick" prefHeight="35.0" style="-fx-background-color: black;" text="Terror" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="David Libre Regular" size="14.0" />
+               </font></Button>
          </children>
       </GridPane>
    </top>
    <center>
-      <GridPane fx:id="gridRelatos" prefHeight="266.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <GridPane fx:id="gridRelatos" prefHeight="266.0" prefWidth="600.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -37,7 +47,7 @@
       </GridPane>
    </center>
    <bottom>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane prefHeight="40.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -46,8 +56,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnReiniciar" mnemonicParsing="false" onAction="#btnReiniciarClick" text="Reiniciar" />
-            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirClick" text="Salir" GridPane.columnIndex="1" />
+            <Button fx:id="btnReiniciar" mnemonicParsing="false" onAction="#btnReiniciarClick" text="Reiniciar">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirClick" text="Salir" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
          </children>
       </GridPane>
    </bottom>

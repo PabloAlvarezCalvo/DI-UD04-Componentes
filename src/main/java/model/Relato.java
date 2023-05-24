@@ -19,9 +19,11 @@ public class Relato extends ImageView implements TimerEndedListener {
         timer.addListener(this);
     }
 
+
     public void addImage(String url){
         images.add(url);
     }
+
 
     public void nextImage(){
         if (!finished) {
@@ -31,12 +33,13 @@ public class Relato extends ImageView implements TimerEndedListener {
             if (index == images.size() - 1) {
                 finished = true;
             } else {
-                stop();
+                    timer.stop();
                 start();
             }
         }
 
     }
+
 
     public void start(){
         if (images.size() > 0) {
@@ -47,23 +50,15 @@ public class Relato extends ImageView implements TimerEndedListener {
         timer.start();
     }
 
-    public void pause(){
-        timer.pause();
-    }
-
-    public void resume(){
-        timer.resume();
-    }
 
     public void stop(){
-        timer.stop();
+        try {
+            timer.stop();
+        } catch (Exception ignore){}
+
+        index = 0;
         finished = false;
         this.setVisible(false);
-    }
-
-    public void restart(){
-        stop();
-        start();
     }
 
 
