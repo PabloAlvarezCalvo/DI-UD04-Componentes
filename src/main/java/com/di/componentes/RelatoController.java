@@ -4,7 +4,8 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
-import model.Relato;
+import relato.Relato;
+
 
 public class RelatoController {
     @FXML Button btnReiniciar, btnSalir;
